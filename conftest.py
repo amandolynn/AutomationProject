@@ -1,4 +1,5 @@
 """Pytest fixtures used throughout the test suite."""
+import os
 import pytest
 from playwright.sync_api import sync_playwright
 from faker import Faker
@@ -15,7 +16,9 @@ def fake_data():
 def page():
     """Provide a Playwright browser page instance."""
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(
+            headless=os.getenv("CI") == "true"
+        )
         browser_page = browser.new_page()
         yield browser_page
         browser.close()
