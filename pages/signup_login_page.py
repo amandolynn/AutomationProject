@@ -56,6 +56,7 @@ class SignupLoginPage:
         self.name_input().fill(name)
         self.email_input().fill(email)
         self.signup_button().click()
+        self.page.locator("#id_gender1").wait_for(state="visible")
 
     def login(self, email, password):
         """Fill login fields and submit the login form."""
