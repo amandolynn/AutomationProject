@@ -41,7 +41,7 @@ AutomationProject/
 │
 ├── tests/
 │   ├── test_home_page.py
-│   ├── test_login.py
+│   ├── test_logging_in.py
 │   └── test_signup.py
 │
 ├── conftest.py
@@ -57,7 +57,7 @@ Current automated scenarios include:
 - Verify page title
 - Verify logo is visible
 - Verify navigation links are visible
-- Navigate to Signup/Login page
+- Navigate to products page
 
 ### Signup
 - Navigate to Signup page
@@ -130,7 +130,6 @@ This public website is designed specifically for practicing UI and API automatio
 - Checkout flow
 - Negative login scenarios
 - Additional API coverage
-- GitHub Actions CI/CD pipeline
 - HTML test reporting
 
 ---
